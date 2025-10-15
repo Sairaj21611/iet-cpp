@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Fixed charset -->
+  <title>SBS Enterprise - Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('artistic-blurry-colorful-wallpaper-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      color: white;
+      text-align: center;
+
+      /* Animate on load */
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+
+    .company-name, .tagline, h2 {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .company-name {
+      animation-delay: 0.4s;
+    }
+
+    .tagline {
+      animation-delay: 0.6s;
+    }
+
+    h2 {
+      animation-delay: 0.8s;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    input[type="text"] {
+      animation-delay: 1s;
+    }
+
+    input[type="password"] {
+      animation-delay: 1.2s;
+    }
+
+    button {
+      background-color: #6a1b9a;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      animation-delay: 1.4s;
+    }
+
+    button:hover {
+      background-color: #8e24aa;
+    }
+
+    .contact-info {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #ccc;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 1.6s;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    .footer {
+      font-size: 12px;
+      margin-top: 10px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="logo.jpg" alt="Logo" class="logo">
+
+    <div class="company-name">SBS Enterprise</div>
+    <div class="tagline">Global Import & Export Solutions</div>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="contact-info">
+      <p>📧 sbsenterprise@gmail.com</p>
+    </div>
+  </div>
+
+</body>
+</html>
